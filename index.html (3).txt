@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Profesional - Angie Reina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #6b21a8; /* Purple-900 */
+            --accent: #be185d;  /* Pink-700 */
+            --soft-rose: #fdf2f8;
+            --gold: #d4af37;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fffafb;
+        }
+
+        h1, h2, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-header {
+            background: linear-gradient(135deg, #2d1b4e 0%, #1e1b4b 100%);
+            border-bottom: 4px solid #be185d;
+        }
+
+        .experience-card {
+            background: white;
+            border: 1px solid #f0f0f0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .experience-card:hover {
+            border-color: #f472b6;
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-pill {
+            background: white;
+            border: 1px solid #fbcfe8;
+            color: #9d174d;
+            transition: all 0.3s ease;
+        }
+
+        .skill-pill:hover {
+            background: #be185d;
+            color: white;
+        }
+
+        .line-decoration {
+            width: 40px;
+            height: 2px;
+            background: #be185d;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        /* Estilos Responsive Profundos */
+        @media (max-width: 768px) {
+            .header-content { text-align: center; }
+            .sidebar { order: 2; }
+            .main-content { order: 1; }
+        }
+
+        @media print {
+            .no-print { display: none; }
+            body { background: white; padding: 0; }
+            .experience-card { border: none; border-bottom: 1px solid #eee; break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Header Elegante -->
+    <header class="glass-header text-white pt-16 pb-20 px-6 relative">
+        <div class="max-w-6xl mx-auto flex flex-col items-center md:items-start">
+            <div class="header-content w-full flex flex-col md:flex-row justify-between items-end">
+                <div>
+                    <span class="text-pink-400 font-bold tracking-[0.3em] text-xs uppercase mb-2 block">Currículum Vitae</span>
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight italic">Angie Katerine Reina</h1>
+                    <p class="text-xl md:text-2xl text-slate-300 font-light mt-4 max-w-2xl">
+                        Gestión Estratégica en Entornos Comerciales & Especialista en Excelencia Operativa.
+                    </p>
+                </div>
+                <div class="no-print hidden md:block">
+                    <button onclick="window.print()" class="bg-pink-700 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-bold shadow-2xl transition-all transform hover:-translate-y-1">
+                        <i class="fas fa-print mr-2"></i> Generar PDF
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full pt-8 border-t border-white/10">
+                <div class="flex items-center gap-3 text-sm">
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"><i class="fas fa-phone text-pink-400"></i></div>
+                    <span>643 195 417</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"><i class="fas fa-envelope text-pink-400"></i></div>
+                    <span class="break-all">reinagranadaa@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"><i class="fas fa-location-arrow text-pink-400"></i></div>
+                    <span>Zaragoza, España</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm">
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"><i class="fas fa-id-card text-pink-400"></i></div>
+                    <span>NIE Vigente</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto -mt-10 px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 pb-20">
+        
+        <!-- Sidebar Columna -->
+        <aside class="sidebar lg:col-span-4 space-y-10">
+            <!-- Perfil -->
+            <section class="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50">
+                <div class="mb-6">
+                    <div class="line-decoration"></div>
+                    <h2 class="text-2xl font-bold inline ml-3">Extracto</h2>
+                </div>
+                <p class="text-slate-600 leading-loose text-sm italic">
+                    "Comprometida con la disciplina operativa y la estética del servicio. Mi trayectoria se define por la capacidad de transformar entornos complejos en espacios de alta eficiencia, priorizando siempre la satisfacción del cliente y la integridad de los procesos de marca."
+                </p>
+            </section>
+
+            <!-- Habilidades -->
+            <section class="bg-slate-900 text-white p-8 rounded-3xl shadow-xl">
+                <h2 class="text-2xl font-bold mb-8 italic">Core Skills</h2>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2 text-xs font-bold uppercase tracking-widest text-pink-400">Operaciones</div>
+                        <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-pink-500 to-purple-500 w-[95%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-xs font-bold uppercase tracking-widest text-pink-400">Soft Skills</div>
+                        <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-pink-500 to-purple-500 w-[90%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2 text-xs font-bold uppercase tracking-widest text-pink-400">Ventas</div>
+                        <div class="h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-pink-500 to-purple-500 w-[85%]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 flex flex-wrap gap-2">
+                    <span class="skill-pill px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tight">Análisis Crítico</span>
+                    <span class="skill-pill px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tight">Resolución proactiva</span>
+                    <span class="skill-pill px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tight">Inteligencia Emocional</span>
+                    <span class="skill-pill px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tight">Fidelización</span>
+                </div>
+            </section>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <div class="main-content lg:col-span-8 space-y-12">
+            
+            <section>
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-4xl font-bold">Experiencia Expandida</h2>
+                    <div class="flex-grow h-[1px] bg-slate-200"></div>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Exp 1 -->
+                    <article class="experience-card p-8 rounded-3xl">
+                        <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">Especialista en Mantenimiento de Imagen Corporativa</h3>
+                                <p class="text-pink-700 font-semibold tracking-wide">Salmerón Gourmet | Zaragoza</p>
+                            </div>
+                            <span class="bg-soft-rose text-pink-800 px-4 py-1 rounded-full text-xs font-black mt-2 md:mt-0">2022 — 2023</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Responsable de la integridad sanitaria y visual de un establecimiento boutique, asegurando que cada detalle operativo reflejara los altos estándares de la marca gourmet.
+                        </p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <li class="flex items-start gap-3 text-xs text-slate-500 italic">
+                                <i class="fas fa-check-circle text-pink-500 mt-1"></i>
+                                <span>Supervisión de protocolos APPCC, garantizando la seguridad alimentaria en áreas críticas de charcutería fina.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-xs text-slate-500 italic">
+                                <i class="fas fa-check-circle text-pink-500 mt-1"></i>
+                                <span>Gestión proactiva de recursos técnicos para minimizar interrupciones en el flujo de ventas.</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- Exp 2 -->
+                    <article class="experience-card p-8 rounded-3xl border-l-8 border-pink-700">
+                        <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">Account Executive & Retail Specialist</h3>
+                                <p class="text-pink-700 font-semibold tracking-wide">C.C. Valdebernardo | Madrid</p>
+                            </div>
+                            <span class="bg-soft-rose text-pink-800 px-4 py-1 rounded-full text-xs font-black mt-2 md:mt-0">2021 — 2021</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Gestión integral de unidad de negocio independiente. Responsable de la captación de clientes y la optimización de la rentabilidad del punto de venta mediante estrategias de venta cruzada.
+                        </p>
+                        <div class="bg-slate-50 p-4 rounded-xl space-y-3">
+                            <div class="flex gap-4">
+                                <div class="font-bold text-pink-700 text-xs uppercase min-w-[100px]">Resultados:</div>
+                                <div class="text-xs text-slate-600 italic">Incremento en la tasa de conversión gracias al asesoramiento técnico personalizado en accesorios de telefonía y moda.</div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="font-bold text-pink-700 text-xs uppercase min-w-[100px]">Control:</div>
+                                <div class="text-xs text-slate-600 italic">Gestión de auditorías internas de stock y conciliación diaria de ingresos con precisión absoluta.</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Exp 3 -->
+                    <article class="experience-card p-8 rounded-3xl">
+                        <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-800">Coordinadora Operativa de Tienda</h3>
+                                <p class="text-pink-700 font-semibold tracking-wide">Master GIFT Import S.L.</p>
+                            </div>
+                            <span class="bg-soft-rose text-pink-800 px-4 py-1 rounded-full text-xs font-black mt-2 md:mt-0">2020 — 2020</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Gestión de la cadena de suministro en tienda y atención directa en línea de cajas, equilibrando la eficiencia logística con un servicio al cliente ágil y profesional.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-500">
+                            <li><i class="fas fa-plus text-pink-400 mr-2"></i> Implementación de sistemas de organización en almacén para acelerar el tiempo de reposición en un 20%.</li>
+                            <li><i class="fas fa-plus text-pink-400 mr-2"></i> Liderazgo en la recepción de mercancía crítica, asegurando la calidad del producto desde la descarga hasta el lineal.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Educación -->
+            <section>
+                <div class="bg-gradient-to-r from-slate-800 to-slate-900 p-10 rounded-[3rem] text-white">
+                    <h2 class="text-3xl font-bold mb-6 italic">Trayectoria Académica</h2>
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-center md:text-left">
+                            <h4 class="text-xl font-semibold text-pink-400">Graduado Escolar</h4>
+                            <p class="text-slate-400 uppercase tracking-[0.2em] text-xs mt-2">Liceo Gabriela Mistral / La Presentación</p>
+                        </div>
+                        <div class="h-[1px] w-12 bg-pink-500 hidden md:block"></div>
+                        <div class="text-lg font-serif">Promoción 2015</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-100 py-16 px-6 no-print">
+        <div class="max-w-6xl mx-auto flex flex-col items-center">
+            <div class="mb-8 flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-pink-50 transition"><i class="fab fa-linkedin-in text-slate-400"></i></a>
+                <a href="mailto:reinagranadaa@gmail.com" class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-pink-50 transition"><i class="far fa-envelope text-slate-400"></i></a>
+            </div>
+            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-[0.5em]">Angie Katerine Reina Granada &bull; Zaragoza 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animaciones suaves al hacer scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section, article');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(s => {
+                s.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(s);
+            });
+        });
+    </script>
+</body>
+</html>
